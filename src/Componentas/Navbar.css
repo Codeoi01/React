@@ -1,0 +1,30 @@
+body{
+    background-color: aquamarine;
+    
+}
+
+nav ,ul{
+    display: flex;
+}
+
+nav{
+   background-color: cadetblue;
+   padding: 23px;
+   justify-content: space-between ;
+}
+
+li{
+    list-style-type: none;
+    color: white;
+}
+
+ul{
+    gap: 34px;
+}
+
+
+h2{
+    font-size: 1.7em;
+    font-weight: bold;
+    color: white;
+}
