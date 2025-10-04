@@ -1,13 +1,19 @@
-import pp from "./assets/react.svg"
+import React from 'react'
+import PropTypes from 'prop-types'
+import im from '../assets/react.svg'
+import './Card.css'
 
-function Card(){
-    return(
-       <div className="card">
-        <img src={pp} alt="Profile Picter"/>       
-        <h2>Arshad</h2>
-        <p> i am learning react</p>
-       </div>
-    );
+const card = (props) => {
+  return (
+    <div className='card'>
+     <img  src={im} alt="image" />
+      <h1> {props.title}</h1>
+      <p>{props.dis}</p>
+    </div>
+  )
 }
-
-export default Card
+card.propTypes = {
+    title: PropTypes.string.isRequired,
+    dis: PropTypes.string.isRequired
+}   
+export default card

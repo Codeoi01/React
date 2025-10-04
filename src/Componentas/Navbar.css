@@ -13,12 +13,12 @@ nav{
    justify-content: space-between ;
 }
 
-li{
+ul >li{
     list-style-type: none;
     color: white;
 }
 
-ul{
+nav ,ul{
     gap: 34px;
 }
 
