@@ -1,9 +1,9 @@
-body{
+/* body{
     background-color: aquamarine;
     
 }
 
-nav ,ul{
+nav,ul{
     display: flex;
 }
 
@@ -13,7 +13,7 @@ nav{
    justify-content: space-between ;
 }
 
-ul >li{
+ul> li{
     list-style-type: none;
     color: white;
 }
@@ -27,4 +27,4 @@ h2{
     font-size: 1.7em;
     font-weight: bold;
     color: white;
-}
+} */

@@ -1,0 +1,35 @@
+.forum{
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    height: 70vh;
+    margin: 0px 10px 10px 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;    
+
+}
+
+.in-put{
+        margin-bottom: 10px;
+        padding: 4px; 
+        border-radius: 5px;
+        border: 1px solid black; 
+}
+
+.shiping{
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid black; 
+}
+
+.forum h1{
+    color: gray;
+    margin-bottom: 5px;
+} 
+
+.mar{
+    margin: 5px;
+    font-weight: bold;
+} 
+

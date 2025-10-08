@@ -1,17 +1,46 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+import './list.css'
 
-function List (){
-const frute = [ {id: 1, name: "apple",  caloris: 95 }, 
-                {id: 2, name: "orange", caloris: 45}, 
-                {id: 3, name: "banana", caloris: 105}, 
-                {id: 4, name: "coconut",caloris: 159 },] 
+function List (props) {
+
+    const Category = props.Category;     
+    const itemlist = props.items;
+        
+       // Sorting
+
+        //frute.sort((a, b) => a.name.localeCompare(b.name)); // ALPHABETICAL ASCENDING
+        //frute.sort((a, b) => b.name.localeCompare(a.name)); // ALPHABETICAL DESCENDING
+        //frute.sort((a, b) => a.caloris - b.caloris) // NUMERICAL ASCENDING
+        // frute.sort((a, b) => b.caloris - a.caloris) //  NUMERICAL DESCENDING 
+        
+        // Filtering
+
+        // const lowCalfrute =  frute.filter(frute => frute.caloris < 100)     
+        // const highCalfrute =  frute.filter(frute => frute.caloris >= 100)     
+        
  
-// frute.sort((a,b) => a.caloris - b.caloris)
+ 
+ 
+ 
+ const listitem =  itemlist.map(items =><li key={items.id}>
+                                            {items.name}: &nbsp;
+                                            <b>{items.caloris}</b></li>)
+ return(
 
- const listitem =  frute.map(frute => <li key={frute.id}>
-                                          {frute.name}: &nbsp;
-                                          <b>{frute.caloris}</b></li>)
- return(<ul>{listitem}</ul>);
+       <>
+       
+        <ol className='list-items'>
+           {listitem.length > 0 ? <h2 className='list-category'>{Category}</h2> :null } 
+            {listitem}</ol>
+    </>
+
+);
 }
-
+List.propTypes = {
+    Category: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.number,
+                                              name: PropTypes.string,   
+                                              caloris: PropTypes.number})).isRequired 
+}
 export default List
